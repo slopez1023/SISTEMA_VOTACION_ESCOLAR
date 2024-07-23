@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.sistema_votacion_escolar.Controllers.CandidateController">
+    <children>
+        <TableView fx:id="candidatesTable">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID"/>
+                <TableColumn fx:id="nameColumn" text="Nombre"/>
+                <TableColumn fx:id="photoPathColumn" text="Foto"/>
+                <TableColumn fx:id="campaignDetailsColumn" text="Detalles"/>
+            </columns>
+        </TableView>
+        <TextField fx:id="nameField" promptText="Nombre"/>
+        <TextField fx:id="photoPathField" promptText="Ruta de la Foto"/>
+        <TextArea fx:id="campaignDetailsField" promptText="Detalles de la Campaña"/>
+        <Button text="Agregar Candidato" onAction="#handleAddCandidate"/>
+        <Button text="Actualizar Candidato" onAction="#handleUpdateCandidate"/>
+        <Button text="Eliminar Candidato" onAction="#handleDeleteCandidate"/>
+        <Button text="Volver" onAction="#handleReturnToMain"/>
+    </children>
+</VBox>

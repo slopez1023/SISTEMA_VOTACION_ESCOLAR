@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.sistema_votacion_escolar.Controllers.VoterController">
+    <children>
+        <TableView fx:id="votersTable">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID"/>
+                <TableColumn fx:id="nameColumn" text="Nombre"/>
+                <TableColumn fx:id="identificationNumberColumn" text="Número de Identificación"/>
+            </columns>
+        </TableView>
+        <TextField fx:id="nameField" promptText="Nombre"/>
+        <TextField fx:id="identificationNumberField" promptText="Número de Identificación"/>
+        <Button text="Agregar Votante" onAction="#handleAddVoter"/>
+        <Button text="Actualizar Votante" onAction="#handleUpdateVoter"/>
+        <Button text="Eliminar Votante" onAction="#handleDeleteVoter"/>
+        <Button text="Volver" onAction="#handleReturnToMain"/>
+    </children>
+</VBox>
